@@ -1,0 +1,14 @@
+.box {
+  width: 10vw;
+  height: 10vh;
+  background-color: aqua;
+  border: 1px solid black;
+  position: absolute;
+  display: grid;
+  place-items: center;
+
+  &_focus {
+    background-color: chartreuse;
+    border: 2px solid black;
+  }
+}

@@ -1,0 +1,24 @@
+<header class="heading">
+  <h1 class="heading__text">Moveable Box Generator</h1>
+</header>
+
+<main class="box-creator">
+  <section class="box-creator__controls">
+    <button (click)="createBox()">Add box</button>
+    <label>
+      <input type="checkbox" checked (change)="toggleListen($event)" />
+      Move Box
+    </label>
+  </section>
+
+  <section class="boxes">
+    <div class="boxes__container">
+      <app-box
+        [boxId]="boxNo"
+        [focus]="boxNo === focusedBoxNo"
+        (click)="setFocus(boxNo)"
+        *ngFor="let boxNo of boxes"
+      ></app-box>
+    </div>
+  </section>
+</main>
